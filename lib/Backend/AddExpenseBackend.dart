@@ -1,0 +1,115 @@
+import 'dart:async';
+import 'dart:core' ;
+import 'dart:convert';
+import 'dart:io';
+import 'package:flutter/cupertino.dart';
+import 'package:happy_tax_man/Constants/APIs.dart';
+import 'package:happy_tax_man/DashBoard/DashBoardScreen.dart';
+import 'package:happy_tax_man/Data/RequestData.dart';
+import 'package:happy_tax_man/Data/ResponseData.dart';
+import 'package:happy_tax_man/Model/AddExpenseModel.dart';
+import 'package:happy_tax_man/Model/LoginResponse.dart';
+import 'package:happy_tax_man/Utils/AlertDialogs.dart';
+import 'package:happy_tax_man/Utils/Navigators.dart';
+import 'package:http_parser/http_parser.dart';
+import 'package:quiver/strings.dart';
+import 'package:path/path.dart';
+import 'package:http/http.dart' as Client;
+
+class AddExpenseBackend {
+  final url = http + baseURL + addExpensePath;
+  var resBody;
+  LoginResponse loginResponse;
+
+
+
+  /// this methods sends request to backend and handles response for Dashboard data
+  Future<void> addExpenses(BuildContext context, File file) async {
+
+    print(url);
+    print("'${file.path}'");
+    print(basename(file.path));
+    print( basename(file.path).split('.').last.toString());
+
+    print({
+      "amount": RequestData.addExpenseRequestData["cost"],
+      "account_id": ResponseData.loginResponse.account_id,
+      "category": RequestData.addExpenseRequestData["category"],
+      "description": RequestData.addExpenseRequestData["description"],
+      "company": RequestData.addExpenseRequestData["company"],
+      "expclass": RequestData.addExpenseRequestData["expclass"],
+      "mydate": RequestData.addExpenseRequestData["mydate"],
+      "picture":  new Client. MultipartFile.fromBytes(
+          'picture',
+          file.readAsBytesSync(),
+          filename: basename(file.path),
+        contentType: MediaType('image', basename(file.path).split('.').last.toString().toLowerCase())
+      ),
+
+
+    });
+
+
+
+    try {
+
+      final httpResponse = new  Client.MultipartRequest("POST", Uri.parse(url));
+      httpResponse.fields['amount'] = RequestData.addExpenseRequestData["cost"];
+      httpResponse.fields['account_id'] = ResponseData.loginResponse.account_id;
+      httpResponse.fields['category'] = RequestData.addExpenseRequestData["category"];
+      httpResponse.fields['description'] = RequestData.addExpenseRequestData["description"];
+      httpResponse.fields['company'] = RequestData.addExpenseRequestData["company"];
+      httpResponse.fields['expclass'] = RequestData.addExpenseRequestData["expclass"];
+      httpResponse.fields['mydate'] = RequestData.addExpenseRequestData["mydate"];
+
+      httpResponse.files.add(new Client. MultipartFile.fromBytes(
+          'picture',
+          file.readAsBytesSync(),
+          filename: basename(file.path),
+        contentType: MediaType('image', basename(file.path).split('.').last.toString().toLowerCase())
+      ));
+
+      Client.StreamedResponse response = await httpResponse.send();
+      print(response.toString());
+      var resp = await Client.Response.fromStream(response);
+      print(resp.statusCode);
+      print(resp.body);
+
+
+
+
+
+      if(resp.statusCode==200){
+        ///this checks if statusCode is 200, then if so, it decodes the response
+        ///and parse the response to the Response model
+        //resBody = jsonDecode(httpResponse.body.toString());
+        print(resp.body);
+        ResponseData.addExpenseModel = AddExpenseModel.fromJson(jsonDecode(resp.body));
+        if (equalsIgnoreCase("00", ResponseData.addExpenseModel.response_code)){
+          navigateReplace(context, DashBoardScreen());
+          showAlertDialog(context, "Expense Added Successfully");
+        }else if (equalsIgnoreCase("199", ResponseData.addExpenseModel.response_code)){
+          navigateReplace(context, DashBoardScreen());
+          showAlertDialog(context, "Expense Already added");
+        }
+      else{
+          navigateReplace(context, DashBoardScreen());
+          showAlertDialog(context, "Failed to add Expense");
+        }
+
+      }else{
+        showAlertDialog(context, 'An Error Occured: Check Internet Connection');
+      }
+
+    } on TimeoutException catch (error){
+      showAlertDialog(context, 'An Error Occured: Check Internet Connection');
+      throw error;
+
+    } catch (error) {
+      showAlertDialog(context, 'An Error Occured, please try again');
+    throw error;
+
+  }
+
+  }
+}
