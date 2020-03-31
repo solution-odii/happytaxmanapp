@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: appName,
       theme: ThemeData(
         primarySwatch: AppColors.color3,
-          //fontFamily: 'Sofia Pro',
+          fontFamily: 'Sofia Pro',
       ),
       home: SplashScreen(),
     );

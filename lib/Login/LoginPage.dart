@@ -144,7 +144,7 @@ class LoginPageState extends State<LoginPage> {
                           ),
                         ),
                               formViewTwo(
-                                  Icons.lock, passwordHint, TextInputType.text,
+                                  Icons.lock, passwordHint, TextInputType.number,
                                   true, controllerPassword, password),
 
                             ],)),

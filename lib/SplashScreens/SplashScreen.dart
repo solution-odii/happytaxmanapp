@@ -64,10 +64,12 @@ class SplashScreenState extends State<SplashScreen> {
 
   changeOpacity() {
     Future.delayed(Duration(seconds: 1), () {
-      setState(() {
-        widget.opacity = widget.opacity == 0.0 ? 1.0 : 0.0;
-        changeOpacity();
-      });
+      if(context!=null) {
+        setState(() {
+          widget.opacity = widget.opacity == 0.0 ? 1.0 : 0.0;
+          changeOpacity();
+        });
+      }
     });
   }
 

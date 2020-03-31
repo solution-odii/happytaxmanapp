@@ -8,7 +8,7 @@ TextStyle textStyleSmallLight = new TextStyle(fontSize: 14.0);
 
 TextStyle textStyleBigBold = new TextStyle(fontSize: 18.0, fontWeight: FontWeight.w700);
 
-TextStyle textStyleSmallBold = new TextStyle(fontSize: 16.0, fontWeight: FontWeight.w700);
+TextStyle textStyleSmallBold = new TextStyle(fontSize: 16.0, fontWeight: FontWeight.w700, color: Colors.black);
 
 TextStyle textStyleBigSemiBold = new TextStyle(fontSize: 16.0, fontWeight: FontWeight.w500);
 

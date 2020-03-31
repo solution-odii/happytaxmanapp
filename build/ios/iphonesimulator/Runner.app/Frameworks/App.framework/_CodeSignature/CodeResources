@@ -10,33 +10,33 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		hogg349AA5ncEqIpAf8MYUzWHN8=
+		L+z2USeQBl/vzgu5XyWtOMVFwKM=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
-		wiBu+EqzhJxRNucV+GyeBxD2cJQ=
+		QhACY2nTTJYpnMRpzM7iJPyoTmY=
 		</data>
 		<key>flutter_assets/LICENSE</key>
 		<data>
-		IWwE2tKy/f+xGVVQSd2keYpQnzo=
+		G6L4rTaMGaxu7vuIaBvjahMTnNw=
 		</data>
-		<key>flutter_assets/assets/fonts/Sofia Pro Bold.ttf</key>
+		<key>flutter_assets/assets/fonts/SofiaProBold.ttf</key>
 		<data>
 		fVXj2iwtYBECGKVvcBkUKnpttZg=
 		</data>
-		<key>flutter_assets/assets/fonts/Sofia Pro Light.ttf</key>
+		<key>flutter_assets/assets/fonts/SofiaProLight.ttf</key>
 		<data>
 		+zSn8Hn4K5RQJZqZfxaROuIarr4=
 		</data>
-		<key>flutter_assets/assets/fonts/Sofia Pro Medium.ttf</key>
+		<key>flutter_assets/assets/fonts/SofiaProMedium.ttf</key>
 		<data>
 		BxqC9e0uuxELTrptJMdRS5ba/8o=
 		</data>
-		<key>flutter_assets/assets/fonts/Sofia Pro Regular.ttf</key>
+		<key>flutter_assets/assets/fonts/SofiaProRegular.ttf</key>
 		<data>
 		xrzRUSxBmQCkoLhI/oyYxmXuFSk=
 		</data>
-		<key>flutter_assets/assets/fonts/Sofia Pro SemiBold.ttf</key>
+		<key>flutter_assets/assets/fonts/SofiaProSemiBold.ttf</key>
 		<data>
 		ZTIshifeT6bDcO0m9EZtOrCUL/A=
 		</data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		KR9S/o92FOiFG4lz9Zi1qkBPrfA=
+		PVOVWqr3QDHs9mMLFRVXMDnXWrM=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -91,36 +91,36 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hogg349AA5ncEqIpAf8MYUzWHN8=
+			L+z2USeQBl/vzgu5XyWtOMVFwKM=
 			</data>
 			<key>hash2</key>
 			<data>
-			JSfOYHHSnQG5/PkbCotkx5J6ohnl8bVZMBE6LU91lBY=
+			/U07AuPXBlepf5NpJv72JgGW/smDI6di4OZl45Zd4zo=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wiBu+EqzhJxRNucV+GyeBxD2cJQ=
+			QhACY2nTTJYpnMRpzM7iJPyoTmY=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ky6osWX2ozjQPnHU2S+A4aH6NnnxDAv5s87e2HrPK3I=
+			ycRbT57n/GNidWTRyx7OaxeJE7DjiP8yJ9ISPWedSrw=
 			</data>
 		</dict>
 		<key>flutter_assets/LICENSE</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IWwE2tKy/f+xGVVQSd2keYpQnzo=
+			G6L4rTaMGaxu7vuIaBvjahMTnNw=
 			</data>
 			<key>hash2</key>
 			<data>
-			RIG4X39ej1LEH3Ch7o3fln5cxP4tw3HcxeYaClSnU5U=
+			p4+4UZm5jUlyKMO6LHP3+46cCfcB9k5KmExtGxDWZFU=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/fonts/Sofia Pro Bold.ttf</key>
+		<key>flutter_assets/assets/fonts/SofiaProBold.ttf</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -131,7 +131,7 @@
 			TNnOrnqSS2+rLAJ6LX6sx9IZAG4zwp6XzY+7CyJUp34=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/fonts/Sofia Pro Light.ttf</key>
+		<key>flutter_assets/assets/fonts/SofiaProLight.ttf</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -142,7 +142,7 @@
 			gp0wLdteUtU+kh8dk+huuSNGHXKY1x115j+NJmFsViU=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/fonts/Sofia Pro Medium.ttf</key>
+		<key>flutter_assets/assets/fonts/SofiaProMedium.ttf</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -153,7 +153,7 @@
 			z3/ZtE9FAX6B6PaW8LX9IL2mT1XgJcDogZRrvMfjD1M=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/fonts/Sofia Pro Regular.ttf</key>
+		<key>flutter_assets/assets/fonts/SofiaProRegular.ttf</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -164,7 +164,7 @@
 			1h+6vQvl0+oecfCegcj7j330RxHTqxg2v50127HM5kY=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/fonts/Sofia Pro SemiBold.ttf</key>
+		<key>flutter_assets/assets/fonts/SofiaProSemiBold.ttf</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -234,11 +234,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KR9S/o92FOiFG4lz9Zi1qkBPrfA=
+			PVOVWqr3QDHs9mMLFRVXMDnXWrM=
 			</data>
 			<key>hash2</key>
 			<data>
-			o8adJe/R/liBw+NlCeVKGAvSH6XnGVkHovL7bk6ORR4=
+			D7DypfLLHdtecBR3PUhNBKvcH2DU3HY95ygFtikoXA8=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
