@@ -90,29 +90,29 @@ class UpdateExpenseBackend {
         print(resp.body);
         ResponseData.updateExpenseResponse = UpdateExpenseModel.fromJson(jsonDecode(resp.body));
         if (equalsIgnoreCase("00", ResponseData.updateExpenseResponse.response_code)){
-          navigateReplace(context, DashBoardScreen());
+          await navigateReplace(context, DashBoardScreen());
           showAlertDialog(context, "Expense Updated Successfully");
         }else if (equalsIgnoreCase("199", ResponseData.updateExpenseResponse.response_code)){
-          navigateReplace(context, DashBoardScreen());
+         await navigateReplace(context, DashBoardScreen());
           showAlertDialog(context, "Expense Already added");
         }
         else{
-          navigateReplace(context, DashBoardScreen());
+         await navigateReplace(context, DashBoardScreen());
           showAlertDialog(context, "Failed to add Expense");
         }
 
       }else{
-        navigateReplace(context, DashBoardScreen());
+        await navigateReplace(context, DashBoardScreen());
         showAlertDialog(context, 'An Error Occured: Check Internet Connection');
       }
 
     } on TimeoutException catch (error){
-      navigateReplace(context, DashBoardScreen());
+     await navigateReplace(context, DashBoardScreen());
       showAlertDialog(context, 'An Error Occured: Check Internet Connection');
       throw error;
 
     } catch (error) {
-      navigateReplace(context, DashBoardScreen());
+      await navigateReplace(context, DashBoardScreen());
       showAlertDialog(context, 'An Error Occured, please try again');
       throw error;
 

@@ -80,7 +80,7 @@ class AddInvoiceBackend{
 
         ResponseData.addInvoiceResponse = AddInvoiceModel.fromJson(resBody);
         if (equalsIgnoreCase("00", ResponseData.addInvoiceResponse.response_code)){
-          navigateReplace(context, DashBoardScreen());
+          await navigatePush(context, DashBoardScreen());
           showAlertDialog(context, "Invoice Added Successfully");
         }else if (equalsIgnoreCase("101", ResponseData.addInvoiceResponse.response_code)){
          // navigateReplace(context, DashBoardScreen());

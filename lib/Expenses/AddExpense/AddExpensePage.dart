@@ -9,6 +9,7 @@ import 'package:happy_tax_man/Data/ResponseData.dart';
 import 'package:happy_tax_man/Expenses/AddExpense/AddExpenseDesignComponents.dart';
 import 'package:happy_tax_man/Model/ExpensesCategoryModel.dart';
 import 'package:happy_tax_man/Utils/AlertDialogs.dart';
+import 'package:happy_tax_man/Utils/Navigators.dart';
 import 'package:happy_tax_man/Utils/Styles.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
@@ -297,7 +298,11 @@ class _AddExpensePageState extends State<AddExpensePage> {
     } else {
       formKey.currentState.save();
       loadingDialog(context);
-      AddExpenseBackend().addExpenses(context, file1);
+      try {
+        await AddExpenseBackend().addExpenses(context, file1);
+      } catch (e) {
+
+      }
 
     }
   }

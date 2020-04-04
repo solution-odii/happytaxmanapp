@@ -53,7 +53,7 @@ class _SelectedInvoicePageState extends State<SelectedInvoicePage> {
         children: <Widget>[
 
           Container(
-            height: 230,
+            height: 250,
             decoration: BoxDecoration(
                 color: Colors.white
             ),

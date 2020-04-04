@@ -159,8 +159,9 @@ class AddInvoicePageState extends State<AddInvoicePage> {
               )
                   :
               SizedBox(
-                height: 200,
+                height: 450,
                 child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
                   addAutomaticKeepAlives: true,
                   itemCount: lineItemsForm.length,
                   itemBuilder: (_, index) => lineItemsForm[index],
@@ -171,7 +172,7 @@ class AddInvoicePageState extends State<AddInvoicePage> {
                 stream: addInvoiceBloc.isTotalVisibleObservable,
                 builder: (context, AsyncSnapshot<bool> snapshot) {
                   return Visibility(
-                    visible: snapshot.data,
+                    visible: snapshot.data ==null ? false : snapshot.data,
                     child: Container(
                       child: Column(
                         children: <Widget>[
@@ -253,7 +254,7 @@ class AddInvoicePageState extends State<AddInvoicePage> {
                 stream: addInvoiceBloc.isSaveChecker.stream,
                 builder: (context, AsyncSnapshot<bool> snapshot) {
                   return Visibility(
-                    visible:  lineItemsForm.length <= 0 ? !snapshot.data : snapshot.data,
+                    visible:  lineItemsForm.length <= 0 ? false : snapshot.data,
                     child: RaisedButton(
                       padding: EdgeInsets.symmetric(vertical: 16.0),
                       color: AppColors.color1,

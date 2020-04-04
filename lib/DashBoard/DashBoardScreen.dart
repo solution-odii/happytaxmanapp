@@ -102,6 +102,18 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
             SizedBox(
               height: 5,
             ),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                ' Income vs Expense ',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500),
+              ),
+            ),
+
             Padding(
               padding: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
 
@@ -152,9 +164,9 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                 ),
 
                                 Text(
-                                  ' or ',
+                                  ' --or-- ',
                                   style: TextStyle(
-                                      color: AppColors.color2,
+                                      color: Colors.black,
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500),
                                 ),
@@ -242,9 +254,9 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                 ),
 
                                 Text(
-                                  ' or ',
+                                  ' --or-- ',
                                   style: TextStyle(
-                                      color: AppColors.color2,
+                                      color: Colors.black,
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500),
                                 ),

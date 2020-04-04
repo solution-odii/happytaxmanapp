@@ -86,10 +86,10 @@ class AddExpenseBackend {
         print(resp.body);
         ResponseData.addExpenseModel = AddExpenseModel.fromJson(jsonDecode(resp.body));
         if (equalsIgnoreCase("00", ResponseData.addExpenseModel.response_code)){
-          navigateReplace(context, DashBoardScreen());
+          await navigateReplace(context, DashBoardScreen());
           showAlertDialog(context, "Expense Added Successfully");
         }else if (equalsIgnoreCase("199", ResponseData.addExpenseModel.response_code)){
-          navigateReplace(context, DashBoardScreen());
+         await navigateReplace(context, DashBoardScreen());
           showAlertDialog(context, "Expense Already added");
         }
       else{

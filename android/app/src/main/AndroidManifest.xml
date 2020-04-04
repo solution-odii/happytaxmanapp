@@ -1,5 +1,5 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.happy_tax_man">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+          package="com.example.happy_tax_man">
 
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -10,7 +10,9 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="happy_tax_man"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+
+    >
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
