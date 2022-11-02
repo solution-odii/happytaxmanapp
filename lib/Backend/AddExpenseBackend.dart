@@ -12,7 +12,7 @@ import 'package:happy_tax_man/Model/LoginResponse.dart';
 import 'package:happy_tax_man/Utils/AlertDialogs.dart';
 import 'package:happy_tax_man/Utils/Navigators.dart';
 import 'package:http_parser/http_parser.dart';
-import 'package:quiver/strings.dart';
+
 import 'package:path/path.dart';
 import 'package:http/http.dart' as Client;
 
@@ -85,10 +85,10 @@ class AddExpenseBackend {
         //resBody = jsonDecode(httpResponse.body.toString());
         print(resp.body);
         ResponseData.addExpenseModel = AddExpenseModel.fromJson(jsonDecode(resp.body));
-        if (equalsIgnoreCase("00", ResponseData.addExpenseModel.response_code)){
+        if ("00" == ResponseData.addExpenseModel.response_code){
           await navigateReplace(context, DashBoardScreen());
           showAlertDialog(context, "Expense Added Successfully");
-        }else if (equalsIgnoreCase("199", ResponseData.addExpenseModel.response_code)){
+        }else if ("199" == ResponseData.addExpenseModel.response_code){
          await navigateReplace(context, DashBoardScreen());
           showAlertDialog(context, "Expense Already added");
         }

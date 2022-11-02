@@ -8,9 +8,9 @@
          FlutterApplication and put your custom class here. -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:name="io.flutter.app.FlutterApplication"
+        android:name="HappyTaxMan"
         android:label="happy_tax_man"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/launcher_icon"
 
     >
         <activity
@@ -32,5 +32,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
     </application>
 </manifest>

@@ -6,7 +6,7 @@ import 'package:happy_tax_man/DashBoard/DashBoardScreen.dart';
 import 'package:happy_tax_man/Model/AddInvoiceModel.dart';
 import 'package:happy_tax_man/Utils/AlertDialogs.dart';
 import 'package:happy_tax_man/Utils/Navigators.dart';
-import 'package:quiver/strings.dart';
+
 import 'package:flutter/material.dart';
 import 'package:happy_tax_man/Constants/APIs.dart';
 import 'package:happy_tax_man/Data/ResponseData.dart';
@@ -79,10 +79,10 @@ class AddInvoiceBackend{
         resBody = jsonDecode(httpResponse.data.toString());
 
         ResponseData.addInvoiceResponse = AddInvoiceModel.fromJson(resBody);
-        if (equalsIgnoreCase("00", ResponseData.addInvoiceResponse.response_code)){
+        if ("00" == ResponseData.addInvoiceResponse.response_code){
           await navigatePush(context, DashBoardScreen());
           showAlertDialog(context, "Invoice Added Successfully");
-        }else if (equalsIgnoreCase("101", ResponseData.addInvoiceResponse.response_code)){
+        }else if ("101" == ResponseData.addInvoiceResponse.response_code){
          // navigateReplace(context, DashBoardScreen());
           showAlertDialog(context, ResponseData.addInvoiceResponse.response_description.toString());
         }

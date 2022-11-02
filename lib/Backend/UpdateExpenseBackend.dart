@@ -14,7 +14,7 @@ import 'package:happy_tax_man/Model/UpdateExpenseModel.dart';
 import 'package:happy_tax_man/Utils/AlertDialogs.dart';
 import 'package:happy_tax_man/Utils/Navigators.dart';
 import 'package:http_parser/http_parser.dart';
-import 'package:quiver/strings.dart';
+
 import 'package:path/path.dart';
 import 'package:http/http.dart' as Client;
 
@@ -89,10 +89,10 @@ class UpdateExpenseBackend {
         //resBody = jsonDecode(httpResponse.body.toString());
         print(resp.body);
         ResponseData.updateExpenseResponse = UpdateExpenseModel.fromJson(jsonDecode(resp.body));
-        if (equalsIgnoreCase("00", ResponseData.updateExpenseResponse.response_code)){
+        if ("00" == ResponseData.updateExpenseResponse.response_code){
           await navigateReplace(context, DashBoardScreen());
           showAlertDialog(context, "Expense Updated Successfully");
-        }else if (equalsIgnoreCase("199", ResponseData.updateExpenseResponse.response_code)){
+        }else if ("199" == ResponseData.updateExpenseResponse.response_code){
          await navigateReplace(context, DashBoardScreen());
           showAlertDialog(context, "Expense Already added");
         }
@@ -172,10 +172,10 @@ class UpdateExpenseBackend {
         //resBody = jsonDecode(httpResponse.body.toString());
         print(resp.body);
         ResponseData.updateExpenseResponse = UpdateExpenseModel.fromJson(jsonDecode(resp.body));
-        if (equalsIgnoreCase("00", ResponseData.updateExpenseResponse.response_code)){
+        if ("00" == ResponseData.updateExpenseResponse.response_code){
           navigateReplace(context, DashBoardScreen());
           showAlertDialog(context, "Expense Updated Successfully");
-        }else if (equalsIgnoreCase("199", ResponseData.updateExpenseResponse.response_code)){
+        }else if ("199" == ResponseData.updateExpenseResponse.response_code){
           navigateReplace(context, DashBoardScreen());
           showAlertDialog(context, "Expense Already added");
         }

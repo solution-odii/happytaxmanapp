@@ -5,7 +5,7 @@ import 'package:happy_tax_man/Invoices/SelectedInvoice/InvoiceLineItemStream.dar
 import 'package:happy_tax_man/Model/InvoicesHistoryModel.dart';
 import 'package:happy_tax_man/Utils/Navigators.dart';
 import 'package:happy_tax_man/Utils/Styles.dart';
-import 'package:quiver/strings.dart';
+
 
 class SelectedInvoicePage extends StatefulWidget {
 
@@ -23,12 +23,12 @@ class _SelectedInvoicePageState extends State<SelectedInvoicePage> {
   var statusTextColor;
 
   void buildStatusColor(){
-    if (equalsIgnoreCase(
-        widget.invoicesHistoryModel.status, 'Paid')) {
+    if (
+        widget.invoicesHistoryModel.status == 'Paid') {
       statusColor = AppColors.designColor7;
       statusTextColor = AppColors.designColor8;
-    } else if(equalsIgnoreCase(
-        widget.invoicesHistoryModel.status, 'unpaid')) {
+    } else if(
+        widget.invoicesHistoryModel.status == 'unpaid') {
       statusColor = AppColors.designColor5;
       statusTextColor = AppColors.designColor6;
 

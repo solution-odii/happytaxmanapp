@@ -9,7 +9,7 @@ import 'package:happy_tax_man/Model/ExpensesHistoryModel.dart';
 import 'package:happy_tax_man/Utils/AlertDialogs.dart';
 import 'package:happy_tax_man/Utils/Navigators.dart';
 import 'package:http/http.dart' as Client;
-import 'package:quiver/strings.dart';
+
 
 class DeleteExpenseBackend {
   final url = http + baseURL + deleteExpensePath;
@@ -37,10 +37,10 @@ class DeleteExpenseBackend {
         resBody = jsonDecode(httpResponse.body.toString());
 
         ResponseData.deleteExpenseResponse = DeleteExpenseModel.fromJson(resBody);
-        if (equalsIgnoreCase("00", ResponseData.deleteExpenseResponse.response_code)){
+        if ("00" == ResponseData.deleteExpenseResponse.response_code){
           await navigateReplace(context, DashBoardScreen());
           showAlertDialog(context, "Expense Deleted Successfully");
-        }else if (equalsIgnoreCase("199", ResponseData.updateExpenseResponse.response_code)){
+        }else if ("199" == ResponseData.updateExpenseResponse.response_code){
           await navigateReplace(context, DashBoardScreen());
           showAlertDialog(context, "Failed to delete Expense");
         }

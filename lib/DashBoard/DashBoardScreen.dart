@@ -12,7 +12,7 @@ import 'package:happy_tax_man/Login/LoginPage.dart';
 import 'package:happy_tax_man/Utils/Navigators.dart';
 import 'package:happy_tax_man/Utils/Styles.dart';
 import 'DashBoardBloc.dart';
-import 'package:quiver/strings.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'NavigationDrawerDesign.dart';
@@ -37,7 +37,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
   }
 
   void logOut(String popUpItem) {
-    if (equalsIgnoreCase(popUpItem, "Logout")) {
+    if (popUpItem == "Logout") {
       navigateReplace(context, LoginPage());
     }
   }
